@@ -1361,7 +1361,7 @@ async def health_check():
     return {"status": "healthy", "service": "espacios-con-piscina-api"}
 
 # ============ EXPORT/IMPORT ENDPOINTS ============
-from export_service import create_excel_template, export_data_to_excel
+from backend.export_service import create_excel_template, export_data_to_excel
 from import_service import import_customers, import_villas, import_reservations, import_expenses
 from fastapi import UploadFile, File
 import pandas as pd
