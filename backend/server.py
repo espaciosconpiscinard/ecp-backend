@@ -1362,7 +1362,7 @@ async def health_check():
 
 # ============ EXPORT/IMPORT ENDPOINTS ============
 from backend.export_service import create_excel_template, export_data_to_excel
-from import_service import import_customers, import_villas, import_reservations, import_expenses
+from backend.import_service import import_customers, import_villas, import_reservations, import_expenses
 from fastapi import UploadFile, File
 import pandas as pd
 
