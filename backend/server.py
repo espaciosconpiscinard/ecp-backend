@@ -10,7 +10,7 @@ from typing import List, Optional
 from datetime import datetime, timezone, timedelta
 
 # Import local modules
-from models import (
+from backend.models import (
     UserCreate, UserLogin, User, UserResponse,
     CustomerCreate, Customer,
     CategoryCreate, CategoryUpdate, Category,
@@ -26,11 +26,11 @@ from models import (
     InvoiceTemplateCreate, InvoiceTemplateUpdate, InvoiceTemplate,
     LogoConfig
 )
-from auth import (
+from backend.auth import (
     verify_password, get_password_hash, create_access_token,
     get_current_user, require_admin
 )
-from database import Database, serialize_doc, serialize_docs, prepare_doc_for_insert, restore_datetimes
+from backend.database import Database, serialize_doc, serialize_docs, prepare_doc_for_insert, restore_datetimes
 
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
